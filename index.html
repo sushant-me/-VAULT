@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devanagari Vault 2.0</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  </head>
+  <body>
+    <div class="aurora-background">
+      <div class="aurora-shape shape-1"></div>
+      <div class="aurora-shape shape-2"></div>
+      <div class="aurora-shape shape-3"></div>
+    </div>
+
+    <div class="container">
+      <header>
+        <div class="logo">
+          <span class="devanagari">देवनागरी</span>
+          <span class="english">VAULT</span>
+        </div>
+        <div class="tagline">Advanced Obfuscated Encryption</div>
+      </header>
+
+      <div class="app-grid">
+        <div class="crypto-module" id="encryption-module">
+          <div class="module-header">
+            <h2><i class="fas fa-lock icon"></i>Encrypt</h2>
+          </div>
+          <div class="password-wrapper">
+            <i class="fas fa-key password-icon"></i>
+            <input
+              type="password"
+              id="encryptPassword"
+              class="password-input"
+              placeholder="Enter Password to Encrypt"
+            />
+          </div>
+          <textarea
+            id="originalMessage"
+            placeholder="Type your secret message here..."
+          ></textarea>
+          <button id="encryptBtn" class="primary-btn">
+            <i class="fas fa-bolt btn-icon"></i> Generate Ciphertext
+          </button>
+          <div class="result-area">
+            <div id="encryptedMessage" class="message-output devanagari-font">
+              Your encrypted message will appear here...
+            </div>
+            <button id="copyEncrypted" class="secondary-btn">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="crypto-module" id="decryption-module">
+          <div class="module-header">
+            <h2><i class="fas fa-unlock icon"></i>Decrypt</h2>
+          </div>
+          <div class="password-wrapper">
+            <i class="fas fa-key password-icon"></i>
+            <input
+              type="password"
+              id="decryptPassword"
+              class="password-input"
+              placeholder="Enter Password to Decrypt"
+            />
+          </div>
+          <textarea
+            id="encryptedInput"
+            placeholder="Paste your encrypted message here..."
+            class="devanagari-font"
+          ></textarea>
+          <button id="decryptBtn" class="primary-btn">
+            <i class="fas fa-magic btn-icon"></i> Reveal Message
+          </button>
+          <div class="result-area">
+            <div id="decryptedMessage" class="message-output">
+              Your decrypted message will appear here...
+            </div>
+            <button id="copyDecrypted" class="secondary-btn">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Secured with AES & Obfuscation Layer • 100% Client-Side</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
